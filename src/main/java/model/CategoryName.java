@@ -5,7 +5,7 @@ public enum CategoryName {
     LECTURENOTES("Course, date, topic"),
     TRAININGNOTES("Day of week, training type"),
     SHOPINGNOTES("What to buy"),
-    DIFFERENTNOTES("Different notes");
+    OTHERNOTES("Different notes");
 
     private String name;
 

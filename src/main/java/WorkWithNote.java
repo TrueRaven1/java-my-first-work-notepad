@@ -1,7 +1,4 @@
-import model.Category;
-import model.CategoryName;
-import model.NoteText;
-import model.User;
+import model.*;
 
 public class WorkWithNote {
     public static void main(String[] args) {
@@ -10,15 +7,15 @@ public class WorkWithNote {
         User dana = new User("dana@one.lv", "krasotka");
 
         Category workNotes = new Category(CategoryName.WORKNOTES);
-
         Category lectureNotes = new Category(CategoryName.LECTURENOTES);
-
         Category trainingNotes = new Category(CategoryName.TRAININGNOTES);
-
         Category shoppingNotes = new Category(CategoryName.SHOPINGNOTES);
+        Category differentNotes = new Category(CategoryName.OTHERNOTES);
 
-        Category differentNotes = new Category(CategoryName.DIFFERENTNOTES);
-        
+        NotesConstructor fistNote = new NotesConstructor(den, CategoryName.WORKNOTES);
+        NotesConstructor secondNote = new NotesConstructor(dana, CategoryName.SHOPINGNOTES);
+        NotesConstructor thirdNote = new NotesConstructor(den, CategoryName.TRAININGNOTES);
+
         NoteText tasksToDoOnWork = new NoteText();
         tasksToDoOnWork.setText("Sdelatj otcheti, proveritj plan, soglasovatj eksport");
 
@@ -39,6 +36,7 @@ public class WorkWithNote {
         System.out.println("Shopping notes : " + shoppingNotes.getName());
         System.out.println("Different notes : " + differentNotes.getName());
 
-        System.out.println();
+        fistNote.getUser().printUserInfo();
+
     }
 }
